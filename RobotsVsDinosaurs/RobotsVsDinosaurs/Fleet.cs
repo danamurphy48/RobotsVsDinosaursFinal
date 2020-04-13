@@ -9,6 +9,8 @@ namespace RobotsVsDinosaurs
     class Fleet
     {
         //member variables
+        public string robotName;
+        public Robot robot;
 
         //constructor
 

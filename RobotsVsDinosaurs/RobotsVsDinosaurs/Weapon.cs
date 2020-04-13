@@ -8,10 +8,22 @@ namespace RobotsVsDinosaurs
 {
     class Weapon
     {
-        //member variables
+        //member variables (HAS A)
+        public string weaponType;
+        public int attackPower;
 
-        //constructor
+        //constructor (SPAWNER)
 
-        //member methods
+
+        //member methods (CAN DO)
+        public void Attack()
+        {
+
+        }
+
+        public void SelectWeapon() //optional from a list
+        {
+
+        }
     }
 }
