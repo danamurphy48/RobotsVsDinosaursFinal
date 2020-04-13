@@ -12,28 +12,31 @@ namespace RobotsVsDinosaurs
         //member variables //fleet vs herd
         public Fleet fleet;
         public Herd herd;
-        public int fleetScore;
-        public int herdScore;
-        public int fleetHealthPoints;
-        public int herdHealthPoints;
+        
         //constructor
         public Battlefield()
         {
-            fleetScore = 0;
-            herdScore = 0;
-            
+            fleet = new Fleet();
+            herd = new Herd();
         }
 
         //member methods
-        //public string Attack() //need to factor attack power vs hp and multiple rounds of games
-        //{
-        //    if (robotAttackPower > dinosaurAttackPower)
-        //    {
+        public void Attack(List<Robot> fleetOfBots) //remove "x" when powerlevel = 0
+        {
+            foreach(Robot robot in fleetOfBots)
+            {
+                if (List[0] <= 0)
+                {
+                    fleetOfBots.Remove(robot);
+                }
+            }
+            //if ()
+            //{
 
-        //    }
-        //    return attack;
-        //}
-        //public void CompareAttacks(int fleetScore, int herdScore)   //fix this
+            //}
+            //return attack;
+        }
+        //public void CompareAttacks(int fleetScore, int herdScore)   //fix this. original plan to calculate sum individual robots/dinos hp and calculate to get fleetHP/DinoHP
         //{
         //    if(fleetScore > herdScore)
         //    {
@@ -46,23 +49,23 @@ namespace RobotsVsDinosaurs
         //        Console.WriteLine("Dinosaurs win this round");
         //    }
         //}
-        public void ShowGameWinner()
+        public void ShowGameWinner()    //make list
         {
-            if (fleetHealthPoints == 0)
+            if (Fleet <= 0)
             {
                 Console.WriteLine("Dinosaurs win the game!");
             }
-            else if (herdHealthPoints == 0)
+            else if (Herd <= 0)
             {
                 Console.WriteLine("Robots win the game!");
             }
         }
         public void StartGame()
         {
-            while(fleetHealthPoints > 0 && herdHealthPoints > 0)
+            while((List<Robot>) > 0 && (List<Herd>) > 0)    //make list
             {
-                int Fleet = Attack();   //working on this
-                int Herd = Attack();    //working on this
+                int fleet = Attack();   //working on this
+                int herd = Attack();    //working on this
             }
             
             //CompareAttacks(fleetScore, herdScore);

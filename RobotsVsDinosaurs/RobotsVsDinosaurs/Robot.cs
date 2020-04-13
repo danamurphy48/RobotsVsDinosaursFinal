@@ -12,16 +12,15 @@ namespace RobotsVsDinosaurs
         public string nameRobot;
         public int healthPoints;
         public int powerLevel;
-        public Weapon weapon;
+        public Weapon weapon;   //could make a list and pick from list ... eventually
 
         //constructor
-        public Robot()
+        public Robot(string name)
         {
             weapon = new Weapon();
-            nameRobot = "Charles";
+            this.nameRobot = name;
             healthPoints = 100;
             powerLevel = 100;
-
         }
         //member methods
         public void Attack(Robot robot, Dinosaur dinosaur)

@@ -18,16 +18,5 @@ namespace RobotsVsDinosaurs
             weaponType = "tazer";
             attackPower = 20;
         }
-
-        //member methods (CAN DO) does this need a method?????
-        public void Attack()
-        {
-            
-        }
-
-        //public void SelectWeapon() //optional from a list
-        //{
-
-        //}
     }
 }

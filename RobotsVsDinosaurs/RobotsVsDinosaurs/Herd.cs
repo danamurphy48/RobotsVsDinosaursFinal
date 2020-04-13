@@ -10,12 +10,15 @@ namespace RobotsVsDinosaurs
     {
         //member variables
         public Dinosaur dinosaur;
-        //list of dino objects
-
+        //public List<Dinosaur> herdOfDinos;
         //constructor
         public Herd()
         {
             dinosaur = new Dinosaur();
+            //herdOfDinos = new List<Dinosaur>();
+            //herdOfDinos.Add("Brett");
+            //herdOfDinos.Add("David");
+            //herdOfDinos.Add("Mike H");
         }
          
         //member methods

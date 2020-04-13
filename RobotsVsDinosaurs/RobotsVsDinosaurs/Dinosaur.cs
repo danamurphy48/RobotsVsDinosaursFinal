@@ -23,7 +23,7 @@ namespace RobotsVsDinosaurs
             attackPower = 100;
         }
         //member methods
-        public string PickADinosaur()
+        public string PickADinosaur()   //don't really need this
         {
             Console.WriteLine("Please select a dinosaur: Stegosaurus, Microraptor, or Triceratops.");
             string userInput = Console.ReadLine();
