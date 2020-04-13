@@ -9,10 +9,13 @@ namespace RobotsVsDinosaurs
     class Fleet
     {
         //member variables
-        public string robotName;
         public Robot robot;
 
         //constructor
+        public Fleet()
+        {
+            robot = new Robot();
+        }
 
         //member methods
     }

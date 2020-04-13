@@ -12,39 +12,40 @@ namespace RobotsVsDinosaurs
         public string typeDinosaur;
         public int health;
         public int energy;
-        public int attackPower; //should this be a string?
+        public int attackPower;
 
         //constructor
         public Dinosaur()
         {
-            typeDinosaur = "Stegosaurus";   //does this need to be this.typeDinosaur etc. for each variable?
+            typeDinosaur = PickADinosaur();
             health = 100;
             energy = 100;
             attackPower = 100;
         }
         //member methods
-        public void PickADinoSaur() //do I string each dino's name?
+        public string PickADinosaur()
         {
             Console.WriteLine("Please select a dinosaur: Stegosaurus, Microraptor, or Triceratops.");
-            string userInput = Console.ReadLine();  //do I need to use a for loop or a do while to make sure user picks one of the dinos on the list?
+            string userInput = Console.ReadLine();
 
             if (userInput == "Stegosaurus")
             {
                 Console.WriteLine("You have selected Stegosaurus");
-                //need attack information
-                //need to be called to herd
-                //do I have all of the dinosaurs listed in herd?
             }
             else if (userInput == "Microraptor")
             {
                 Console.WriteLine("You have selected Microraptor");
-                //needs attack info
-                //needs to be called to herd
             }
             else if (userInput == "Triceratops")
             {
                 Console.WriteLine("You have selected Triceratops");
             }
+            return userInput;
+        }
+        public void Attack(Robot robot, Dinosaur dinosaur)
+        {
+            robot.healthPoints -= 20;
+            dinosaur.energy -= 5;
         }
     }
 }

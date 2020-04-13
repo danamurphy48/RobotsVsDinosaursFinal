@@ -9,10 +9,15 @@ namespace RobotsVsDinosaurs
     class Herd
     {
         //member variables
-        public string nameDinosaur;
-        public Dinosaur PickADinosaur;
-        //constructor
+        public Dinosaur dinosaur;
+        //list of dino objects
 
+        //constructor
+        public Herd()
+        {
+            dinosaur = new Dinosaur();
+        }
+         
         //member methods
         
     }

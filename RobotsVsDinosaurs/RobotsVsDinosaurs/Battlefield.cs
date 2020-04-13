@@ -10,8 +10,8 @@ namespace RobotsVsDinosaurs
     class Battlefield
     {
         //member variables //fleet vs herd
-        public Fleet Fleet;
-        public Herd Herd;
+        public Fleet fleet;
+        public Herd herd;
         public int fleetScore;
         public int herdScore;
         public int fleetHealthPoints;
@@ -21,6 +21,7 @@ namespace RobotsVsDinosaurs
         {
             fleetScore = 0;
             herdScore = 0;
+            
         }
 
         //member methods
@@ -29,22 +30,22 @@ namespace RobotsVsDinosaurs
         //    if (robotAttackPower > dinosaurAttackPower)
         //    {
 
-        //    }    
+        //    }
         //    return attack;
         //}
-        public void CompareAttacks(int fleetScore, int herdScore)   //fix this
-        {
-            if(fleetScore > herdScore)
-            {
-                fleetScore++;
-                Console.WriteLine("Robots win this round");
-            }
-            else if(fleetScore < herdScore)
-            {
-                herdScore++;
-                Console.WriteLine("Dinosaurs win this round");
-            }
-        }
+        //public void CompareAttacks(int fleetScore, int herdScore)   //fix this
+        //{
+        //    if(fleetScore > herdScore)
+        //    {
+        //        fleetScore++;
+        //        Console.WriteLine("Robots win this round");
+        //    }
+        //    else if(fleetScore < herdScore)
+        //    {
+        //        herdScore++;
+        //        Console.WriteLine("Dinosaurs win this round");
+        //    }
+        //}
         public void ShowGameWinner()
         {
             if (fleetHealthPoints == 0)
@@ -64,7 +65,7 @@ namespace RobotsVsDinosaurs
                 int Herd = Attack();    //working on this
             }
             
-            CompareAttacks(fleetScore, herdScore);
+            //CompareAttacks(fleetScore, herdScore);
             ShowGameWinner();
         }
     }

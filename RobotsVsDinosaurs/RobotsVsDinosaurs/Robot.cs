@@ -18,12 +18,16 @@ namespace RobotsVsDinosaurs
         public Robot()
         {
             weapon = new Weapon();
+            nameRobot = "Charles";
+            healthPoints = 100;
+            powerLevel = 100;
 
         }
         //member methods
-        public void SelectRobot()
+        public void Attack(Robot robot, Dinosaur dinosaur)
         {
-            Console.WriteLine();
+            dinosaur.energy -= 10;
+            robot.powerLevel -= 10;
         }
     }
 }
