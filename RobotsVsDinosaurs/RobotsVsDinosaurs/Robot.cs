@@ -23,10 +23,10 @@ namespace RobotsVsDinosaurs
             powerLevel = 100;
         }
         //member methods
-        public void Attack(Robot robot, Dinosaur dinosaur)
+        public void Attack(Dinosaur dinosaur)
         {
             dinosaur.energy -= 10;
-            robot.powerLevel -= 10;
+            powerLevel -= 10;
         }
     }
 }

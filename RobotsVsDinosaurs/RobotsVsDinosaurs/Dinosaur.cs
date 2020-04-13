@@ -42,10 +42,10 @@ namespace RobotsVsDinosaurs
             }
             return userInput;
         }
-        public void Attack(Robot robot, Dinosaur dinosaur)
+        public void Attack(Robot robot)
         {
             robot.healthPoints -= 20;
-            dinosaur.energy -= 5;
+            energy -= 5;
         }
     }
 }

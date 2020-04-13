@@ -17,14 +17,16 @@ namespace RobotsVsDinosaurs
         //constructor
         public Fleet()
         {
-            //robot = new Robot("Dana");
+            //robot = new Robot("Nevin");
             //robot1 = new Robot("Charles");
             //robot2 = new Robot("Mike T");
 
             fleetOfBots = new List<Robot>();
-            fleetOfBots.Add("Nevin");
-            fleetOfBots.Add("Charles");
-            fleetOfBots.Add("Mike T");
+            Robot nevin = new Robot("Nevin");
+            fleetOfBots.Add(nevin);
+            Robot charles = new Robot("Charles");
+            //fleetOfBots.Add(new Robot("Charles")); does'nt make a variable
+            fleetOfBots.Add(new Robot("Mike T"));
         }
 
         //member methods

@@ -9,7 +9,7 @@ namespace RobotsVsDinosaurs
 {
     class Battlefield
     {
-        //member variables //fleet vs herd
+        //member variables //fleet vs herd... don't currently have herd set as a list
         public Fleet fleet;
         public Herd herd;
         
@@ -21,20 +21,27 @@ namespace RobotsVsDinosaurs
         }
 
         //member methods
-        public void Attack(List<Robot> fleetOfBots) //remove "x" when powerlevel = 0
+        //Have Attack method target a single fighter, do damage to them, and display results in console
+        //Then think about using a loop to make it happen multiple times
+        public void Attack() //remove "x" when powerlevel = 0 idk use a bool somewhere?
         {
-            foreach(Robot robot in fleetOfBots)
+            foreach(Robot robot in fleet.fleetOfBots)
             {
-                if (List[0] <= 0)
-                {
-                    fleetOfBots.Remove(robot);
-                }
+                //if (List<Robot>.this.fleet[0] <= 0)
+                //{
+                //    fleetOfBots.RemoveAt(0);
+                //}
+                robot.Attack(herd.herdOfDinos[0]);
             }
             //if ()
             //{
 
             //}
             //return attack;
+        }
+        public void RemoveAt(List<Dinosaur> herdOfDinos, List<Robot> fleetOfRobots)//trying to remove the defeated players
+        {
+            
         }
         //public void CompareAttacks(int fleetScore, int herdScore)   //fix this. original plan to calculate sum individual robots/dinos hp and calculate to get fleetHP/DinoHP
         //{
@@ -49,23 +56,23 @@ namespace RobotsVsDinosaurs
         //        Console.WriteLine("Dinosaurs win this round");
         //    }
         //}
-        public void ShowGameWinner()    //make list
+        public void ShowGameWinner()    //make list or use a bool?
         {
-            if (Fleet <= 0)
+            if (fleet.fleetOfBots.Count <= 0)
             {
                 Console.WriteLine("Dinosaurs win the game!");
             }
-            else if (Herd <= 0)
+            else if (herd.herdOfDinos.Count <= 0)
             {
                 Console.WriteLine("Robots win the game!");
             }
         }
         public void StartGame()
         {
-            while((List<Robot>) > 0 && (List<Herd>) > 0)    //make list
+            while(fleet.fleetOfBots.Count > 0 && herd.herdOfDinos.Count > 0)    //make list....... use a bool?
             {
-                int fleet = Attack();   //working on this
-                int herd = Attack();    //working on this
+                List<Fleet> fleet = Attack();   //working on this
+                List<Herd> herd = Attack();    //working on this
             }
             
             //CompareAttacks(fleetScore, herdScore);
