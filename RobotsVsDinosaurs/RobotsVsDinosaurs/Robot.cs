@@ -18,7 +18,12 @@ namespace RobotsVsDinosaurs
         public Robot()
         {
             weapon = new Weapon();
+
         }
         //member methods
+        public void SelectRobot()
+        {
+            Console.WriteLine();
+        }
     }
 }

@@ -14,6 +14,6 @@ namespace RobotsVsDinosaurs
         //constructor
 
         //member methods
-        //instantiate each dino?
+        
     }
 }

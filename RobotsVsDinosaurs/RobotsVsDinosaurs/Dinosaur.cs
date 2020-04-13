@@ -12,19 +12,17 @@ namespace RobotsVsDinosaurs
         public string typeDinosaur;
         public int health;
         public int energy;
-        public int attackPower; //shoud this be a string?
+        public int attackPower; //should this be a string?
 
         //constructor
         public Dinosaur()
         {
-            typeDinosaur = "Stegosaurus";   //does this need to be typeDinosaur?
+            typeDinosaur = "Stegosaurus";   //does this need to be this.typeDinosaur etc. for each variable?
             health = 100;
             energy = 100;
             attackPower = 100;
         }
-
         //member methods
-
         public void PickADinoSaur() //do I string each dino's name?
         {
             Console.WriteLine("Please select a dinosaur: Stegosaurus, Microraptor, or Triceratops.");

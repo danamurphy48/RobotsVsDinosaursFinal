@@ -10,8 +10,8 @@ namespace RobotsVsDinosaurs
     class Battlefield
     {
         //member variables //fleet vs herd
-        public string Fleet;
-        public string Herd;
+        public Fleet Fleet;
+        public Herd Herd;
         public int fleetScore;
         public int herdScore;
         public int fleetHealthPoints;
@@ -21,7 +21,6 @@ namespace RobotsVsDinosaurs
         {
             fleetScore = 0;
             herdScore = 0;
-
         }
 
         //member methods
@@ -57,13 +56,16 @@ namespace RobotsVsDinosaurs
                 Console.WriteLine("Robots win the game!");
             }
         }
-        //public void StartGame()
-        //{
-        //    int Fleet = Attack();   //working on this
-        //    int Herd = Attack();    //working on this
-
-        //    CompareAttacks(Fleet, Herd);
-        //    ShowGameWinner();
-        //}
+        public void StartGame()
+        {
+            while(fleetHealthPoints > 0 && herdHealthPoints > 0)
+            {
+                int Fleet = Attack();   //working on this
+                int Herd = Attack();    //working on this
+            }
+            
+            CompareAttacks(fleetScore, herdScore);
+            ShowGameWinner();
+        }
     }
 }
