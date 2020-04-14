@@ -71,8 +71,8 @@ namespace RobotsVsDinosaurs
         {
             while(fleet.fleetOfBots.Count > 0 && herd.herdOfDinos.Count > 0)    //make list....... use a bool?
             {
-                List<Fleet> fleet = Attack();   //working on this
-                List<Herd> herd = Attack();    //working on this
+                fleet.fleetOfBots.Count = Attack();   //working on this
+                herd.herdOfDinos.Count = Attack();    //working on this
             }
             
             //CompareAttacks(fleetScore, herdScore);
